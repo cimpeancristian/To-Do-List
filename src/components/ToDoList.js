@@ -1,6 +1,8 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import {addItem} from '../redux/actions';
+import {ToDoListStyled} from './ToDoList.styled';
+import ToDoItem from './ToDoItem';
 
 const ToDoList = ({toDoList, addItem}) => {
     let input;
@@ -13,20 +15,19 @@ const ToDoList = ({toDoList, addItem}) => {
                     type="text"
                     ref={node => {input = node;}}
                     placeholder="Add a to do item here " />
-                <button className="btn" type="submit" onClick={(event) => {
-                    addItem(input.value);
-                    console.log('input.value', input.value);
+                <button className="btn" type="submit" onClick={event => {
+                    addItem({text: input.value, key: Date.now()});
                     input.value='';
                     event.preventDefault();
                 }} >Add</button>
             </form>
-            <div>{toDoList.map((toDo, index) => {
+            <ToDoListStyled>{toDoList.map((toDo, index) => {
                 return (
-                    <div key={`toDo-${index}`}>{toDo}</div>
+                    <ToDoItem key={`toDo-${index}`} toDo={toDo} />
                     )
             })
             }
-            </div>
+            </ToDoListStyled>
         </>
     );
 }
