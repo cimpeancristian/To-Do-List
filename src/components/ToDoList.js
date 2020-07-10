@@ -38,10 +38,10 @@ const mapStateToProps = state => {
     }
 }
 
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = dispatch => {
 
     return {
-        addItem: (input) => dispatch(addItem(input))
+        addItem: input => dispatch(addItem(input))
     }
 }
 
