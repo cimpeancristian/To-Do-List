@@ -7,6 +7,8 @@ import ToDoItem from './ToDoItem';
 const ToDoList = ({toDoList, addItem}) => {
     let input;
 
+    console.log(toDoList);
+
     return (
         <>
             <h2>To do List</h2>
@@ -16,7 +18,7 @@ const ToDoList = ({toDoList, addItem}) => {
                     ref={node => {input = node;}}
                     placeholder="Add a to do item here " />
                 <button className="btn" type="submit" onClick={event => {
-                    addItem({text: input.value, key: Date.now()});
+                    addItem({text: input.value, key: Date.now(), edit: false});
                     input.value='';
                     event.preventDefault();
                 }} >Add</button>

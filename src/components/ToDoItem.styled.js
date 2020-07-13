@@ -13,6 +13,14 @@ export const ButtonStyled = styled.button`
     right: 0;
 `;
 
+export const EditButtonStyled = styled.button`
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    right: 60px;
+`;
+
+
 export const InputStyled = styled.input`
     position: absolute;
     left: 0;
