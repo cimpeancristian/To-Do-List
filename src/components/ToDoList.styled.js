@@ -5,6 +5,6 @@ export const ToDoListStyled = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: left;
     color: blue;
 `;

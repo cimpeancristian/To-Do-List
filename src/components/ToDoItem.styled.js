@@ -17,7 +17,7 @@ export const EditButtonStyled = styled.button`
     position: absolute;
     top:50%;
     transform: translateY(-50%);
-    right: 60px;
+    right: 80px;
 `;
 
 
@@ -31,9 +31,18 @@ export const InputStyled = styled.input`
 export const TextStyled = styled.span`
     position: absolute;
     top:50%;
+    left: 50px;
     transform: translateY(-50%);
     
     &[data-checked="true"]{
         text-decoration: line-through;
     }
+`;
+
+export const InputTextStyled = styled.input`
+    position: absolute;
+    top:50%;
+    left: 50px;
+    transform: translateY(-50%);
+    color: blue;
 `;

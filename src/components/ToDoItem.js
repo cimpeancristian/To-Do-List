@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {ToDoItemStyled, EditButtonStyled, ButtonStyled, InputStyled, TextStyled} from  './ToDoItem.styled';
+import {ToDoItemStyled, EditButtonStyled, ButtonStyled, InputStyled, TextStyled, InputTextStyled} from  './ToDoItem.styled';
 import {connect} from 'react-redux';
 import {editItem, removeItem, submitItem} from '../redux/actions';
 
@@ -27,7 +27,7 @@ const ToDoItem = ({toDo, removeItem, editItem, submitItem}) => {
                     <EditButtonStyled onClick={()=> editItem(toDo.key)}>Edit</EditButtonStyled>
                 </>:
                 <>
-                    <input type="text" value={value} onChange={handleChangeFunction}/>
+                    <InputTextStyled type="text" value={value} onChange={handleChangeFunction}/>
                     <EditButtonStyled onClick={()=> submitItem(value)}>Save</EditButtonStyled>
                 </>}
 
