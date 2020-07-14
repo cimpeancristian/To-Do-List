@@ -7,8 +7,6 @@ import ToDoItem from './ToDoItem';
 const ToDoList = ({toDoList, addItem}) => {
     let input;
 
-    console.log(toDoList);
-
     return (
         <>
             <h2>To do List</h2>
