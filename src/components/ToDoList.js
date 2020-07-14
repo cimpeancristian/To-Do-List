@@ -16,7 +16,7 @@ const ToDoList = ({toDoList, addItem}) => {
                 <input
                     type="text"
                     ref={node => {input = node;}}
-                    placeholder="Add a to do item here " />
+                    placeholder=" Add a to do item here " />
                 <button className="btn" type="submit" onClick={event => {
                     addItem({text: input.value, key: Date.now(), edit: false});
                     input.value='';
