@@ -6,7 +6,7 @@ import {DivStyled, LiStyled, UlStyled} from './App.styled';
 import ToDoList from './components/ToDoList';
 import Search from './components/Search';
 
-function App() {
+const App = () => {
   return (
       <Provider store={store}>
           <DivStyled>
